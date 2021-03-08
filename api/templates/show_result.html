@@ -1,7 +1,9 @@
 <html>
     <body>
+        {{ results }}
         {% for x in results %}
             Image =  {{ x["image"] }}
+            <br>
             Result = {{ x["result"] }}
             <br>
         {% endfor %}
