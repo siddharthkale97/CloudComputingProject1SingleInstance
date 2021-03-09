@@ -54,10 +54,10 @@ def show_res_now(total_files):
         total_files = int(total_files)
     results = []
     print("total files = ", total_files)
-    start_time = timer()
     # test code here
     response = sqs.get_queue_url(QueueName=RESPONSE_QUEUE_NAME)
     queue_url = str(response['QueueUrl'])
+    start_time = timer()
     end_time = timer()
     while (len(results)<int(total_files)):
         if (abs(end_time-start_time)>=60):
